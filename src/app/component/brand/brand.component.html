@@ -1,0 +1,11 @@
+<ul   class="list-group list-group-flush">
+    <li [class]="getAllBrandClass()" routerLink="/cars" style="color: blue;">Tüm Markalar</li>  
+    <li 
+      (click)="setCurrentBrand(brand)"
+      *ngFor="let brand of brands"
+      routerLink="/cars/brands/{{brand.brandId}}"
+      [class]="getCurrentBrandClass(brand)">{{brand.brandName}}
+    </li>
+  </ul> 
+  
+  
