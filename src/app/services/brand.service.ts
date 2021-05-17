@@ -15,6 +15,5 @@ export class BrandService {
 
   getBrand():Observable<ListResponseModel<Brand>>{
     return this.httpClient.get<ListResponseModel<Brand>>(this.url);
-    
   }
 }
